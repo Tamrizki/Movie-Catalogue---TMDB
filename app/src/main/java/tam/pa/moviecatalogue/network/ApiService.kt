@@ -7,9 +7,9 @@ import tam.pa.moviecatalogue.data.remote.response.TvResponse
 
 interface ApiService {
 
-    @GET("movie/popular?api_key=a450ec5bde7ce12656697f09286d96ea&page=1")
+    @GET("movie/popular?api_key=YOUR_API_KEY&page=1")
     fun getMovie(): Call<MovieResponse>
 
-    @GET("tv/popular?api_key=a450ec5bde7ce12656697f09286d96ea&page=1")
+    @GET("tv/popular?api_key=YOUR_API_KEY&page=1")
     fun getSerialTv(): Call<TvResponse>
 }
