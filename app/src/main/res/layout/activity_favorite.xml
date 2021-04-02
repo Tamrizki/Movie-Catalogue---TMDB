@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.favorite.FavoriteActivity">
+
+    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+        android:id="@+id/menu_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId"
+        app:justifyContent="center"
+        android:layout_margin="10dp"
+        app:toggle_selectAnimation="circular_reveal"
+        app:toggle_selectableAmount="1"
+        app:toggle_requiredAmount="1">
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            app:toggle_text="@string/movie"
+            />
+
+        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+            android:id="@+id/btn_serial_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            app:toggle_text="@string/serial_tv" />
+
+    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_movie_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_tv_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>
