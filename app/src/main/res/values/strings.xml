@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Movie Catalogue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie">Movie</string>
+    <string name="serial_tv">Serial TV</string>
+    <string name="title">Title</string>
+    <string name="release_date">Release Date</string>
+    <string name="first_date">\"First Date : \"</string>
+    <string name="detail">Detail</string>
+    <string name="popular_movie">Popular Movie</string>
+    <string name="release_at">Release at : </string>
+    <string name="no_internet_conection">No Internet Conection</string>
+    <string name="text_favorite">Favorite</string>
+    <string name="text_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="text_ok">Ok</string>
+</resources>
