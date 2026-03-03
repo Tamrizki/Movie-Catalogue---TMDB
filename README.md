@@ -17,22 +17,6 @@ Aplikasi ini menggunakan standar **MVVM (Model-View-ViewModel)** dengan **Clean 
 - **Data Layer:** Implementasi Repository, Remote Data Source (Retrofit), dan Local Data Source (Room).
 - **Presentation Layer:** UI (Fragments/Activities) dan ViewModels.
 
-## 🛠️ Teknologi yang Digunakan
-- **Bahasa:** [Kotlin](https://kotlinlang.org/)
-- **Android Jetpack:**
-    - **Room:** Database lokal untuk persistent data.
-    - **Paging Library:** Untuk memuat data dalam potongan besar (pagination).
-    - **ViewModel & LiveData:** Mengelola data UI secara lifecycle-aware.
-    - **View Binding:** Interaksi yang aman dengan elemen UI.
-- **Networking:** [Retrofit2](https://square.github.io/retrofit/) & [OkHttp](https://square.github.io/okhttp/) (Logging Interceptor).
-- **Dependency Injection:** Manual Injection (Injection Pattern).
-- **Image Loading:** [Glide](https://github.com/bumptech/glide).
-- **Testing:**
-    - **JUnit & Mockito:** Untuk Unit Testing pada ViewModel dan Repository.
-    - **Espresso:** Untuk Instrumental UI Testing.
-    - **Idling Resource:** Sinkronisasi testing dengan background task.
-
-
 ## Struktur Proyek
 
 Proyek ini menggunakan struktur paket berdasarkan lapisan fungsionalitas (Layered Architecture) untuk mempermudah pemeliharaan dan pengujian:
@@ -51,6 +35,21 @@ Proyek ini menggunakan struktur paket berdasarkan lapisan fungsionalitas (Layere
 - **`network`**: Konfigurasi Retrofit dan definisi endpoint API.
 - **`vo` (Value Object)**: Wrapper untuk status data seperti `Resource` (Success, Error, Loading).
 - **`utils`**: Kelas pembantu (Helper) dan utilitas umum.
+
+## 🛠️ Teknologi yang Digunakan
+- **Bahasa:** [Kotlin](https://kotlinlang.org/)
+- **Android Jetpack:**
+    - **Room:** Database lokal untuk persistent data.
+    - **Paging Library:** Untuk memuat data dalam potongan besar (pagination).
+    - **ViewModel & LiveData:** Mengelola data UI secara lifecycle-aware.
+    - **View Binding:** Interaksi yang aman dengan elemen UI.
+- **Networking:** [Retrofit2](https://square.github.io/retrofit/) & [OkHttp](https://square.github.io/okhttp/) (Logging Interceptor).
+- **Dependency Injection:** Manual Injection (Injection Pattern).
+- **Image Loading:** [Glide](https://github.com/bumptech/glide).
+- **Testing:**
+    - **JUnit & Mockito:** Untuk Unit Testing pada ViewModel dan Repository.
+    - **Espresso:** Untuk Instrumental UI Testing.
+    - **Idling Resource:** Sinkronisasi testing dengan background task.
 
 ## ⚙️ Cara Menjalankan
 1. Clone repositori ini.
