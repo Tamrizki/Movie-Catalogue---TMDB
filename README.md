@@ -32,6 +32,26 @@ Aplikasi ini menggunakan standar **MVVM (Model-View-ViewModel)** dengan **Clean 
     - **Espresso:** Untuk Instrumental UI Testing.
     - **Idling Resource:** Sinkronisasi testing dengan background task.
 
+
+## Struktur Proyek
+
+Proyek ini menggunakan struktur paket berdasarkan lapisan fungsionalitas (Layered Architecture) untuk mempermudah pemeliharaan dan pengujian:
+
+- **`data`**: Bertanggung jawab atas pengelolaan data.
+  - `local`: Implementasi Room Database, Entity, dan DAO.
+  - `remote`: Menangani request API dan respon dari TMDB.
+  - `repository`: Implementasi Repository yang menggabungkan data dari lokal dan remote (NetworkBoundResource).
+- **`domain`**: Lapisan logika bisnis.
+  - `model`: Model data domain yang digunakan di UI.
+  - `usecase`: Abstraksi logika bisnis aplikasi.
+  - `repository`: Interface repository untuk komunikasi antar layer.
+- **`ui`**: Lapisan presentasi (View & ViewModel).
+  - Terbagi berdasarkan fitur seperti `movie`, `serialtv`, `detail`, `favorite`, dan `home`.
+- **`di`**: Modul Dependency Injection untuk menyediakan instance kelas (seperti Repository/UseCase) ke ViewModel.
+- **`network`**: Konfigurasi Retrofit dan definisi endpoint API.
+- **`vo` (Value Object)**: Wrapper untuk status data seperti `Resource` (Success, Error, Loading).
+- **`utils`**: Kelas pembantu (Helper) dan utilitas umum.
+
 ## ⚙️ Cara Menjalankan
 1. Clone repositori ini.
 2. Dapatkan API KEY dari [TMDB](https://www.themoviedb.org/documentation/api).
