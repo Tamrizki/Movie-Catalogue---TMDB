@@ -16,11 +16,7 @@ Aplikasi ini menggunakan standar **MVVM (Model-View-ViewModel)** dengan **Clean 
 - **Domain Layer:** Berisi UseCase dan Abstraksi Repository (Pure Kotlin).
 - **Data Layer:** Implementasi Repository, Remote Data Source (Retrofit), dan Local Data Source (Room).
 - **Presentation Layer:** UI (Fragments/Activities) dan ViewModels.
-
-## Struktur Proyek
-
-Proyek ini menggunakan struktur paket berdasarkan lapisan fungsionalitas (Layered Architecture) untuk mempermudah pemeliharaan dan pengujian:
-
+Detailnya : 
 - **`data`**: Bertanggung jawab atas pengelolaan data.
   - `local`: Implementasi Room Database, Entity, dan DAO.
   - `remote`: Menangani request API dan respon dari TMDB.
